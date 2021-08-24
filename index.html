@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0 user-scalable=no"
+		/>
+		<title>Заполнение сертификата о вакцинации против коронавируса</title>
+
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./favicon-16x16.png"
+		/>
+		<link rel="manifest" href="./site.webmanifest" />
+		<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5" />
+		<meta name="msapplication-TileColor" content="#da532c" />
+		<meta name="theme-color" content="#ffffff" />
+
+		<link rel="stylesheet" href="./style.css" />
+		<script src="./main.js" defer></script>
+		<script src="./node_modules/qrcode/build/qrcode.min.js" defer></script>
+	</head>
+	<body>
+		<main class="main">
+			<div class="input-data">
+				<h2>Паспортные данные</h2>
+				<div>
+					<label for=""
+						><input
+							type="text"
+							placeholder="Фамилия"
+							name="surname"
+						/>Фамилия</label
+					>
+					<label for=""
+						><input
+							type="text"
+							placeholder="Имя"
+							name="forename"
+						/>Имя</label
+					>
+				</div>
+				<label for=""
+					><input
+						type="text"
+						placeholder="Отчество"
+						name="patronymic"
+					/>Отчество</label
+				>
+				<label for=""
+					><input
+						type="text"
+						placeholder="Фамилия по английски"
+						name="last-name"
+					/>Фамилия по английски</label
+				>
+				<label for=""
+					><input
+						type="text"
+						placeholder="Имя по английски"
+						name="first-name"
+					/>Имя по английски</label
+				>
+				<label for=""
+					><input type="date" name="date" />Дата рождения</label
+				>
+				<label for="">
+					<input
+						type="text"
+						class="uppercase"
+						placeholder="Паспорт"
+						name="passport"
+					/>Паспорт
+				</label>
+				<label for="">
+					<input
+						type="text"
+						class="uppercase"
+						placeholder="Личный номер"
+						name="personal-number"
+					/>Личный номер
+				</label>
+
+				<h2>Информация о вакцинах</h2>
+
+				<label for="">
+					<select name="vaccine">
+						<option value="Russia">Россия</option>
+						<option value="China">Китай</option></select
+					>Наименование вакцины
+				</label>
+
+				<h3>1-ая вакцина</h3>
+
+				<label for=""
+					><input type="date" name="first-date" />Дата
+					проведения</label
+				>
+
+				<label for=""
+					><input
+						type="text"
+						placeholder="Номер партии"
+						name="first-vaccine"
+					/>Номер партии</label
+				>
+
+				<label for="">
+					<select name="first-doctor">
+						<option
+							value="ВИДЕРГОЛЬД ДМИТРИЙ ВЛАДИМИРОВИЧ /
+						VIDERHOLD DZMITRY"
+						>
+							ВИДЕРГОЛЬД ДМИТРИЙ ВЛАДИМИРОВИЧ / VIDERHOLD DZMITRY
+						</option>
+						<option
+							value="СОЛОВЬЁВА ЕЛЕНА ВАСИЛЬЕВНА / SALAUYOVA ALENA"
+						>
+							СОЛОВЬЁВА ЕЛЕНА ВАСИЛЬЕВНА / SALAUYOVA ALENA
+						</option>
+						<option
+							value="ГОРБАЦЕВИЧ ИРЕНА ВИТАЛЬЕВНА /
+						HARBATSEVICH IRENA"
+						>
+							ГОРБАЦЕВИЧ ИРЕНА ВИТАЛЬЕВНА / HARBATSEVICH IRENA
+						</option>
+						<option
+							value="УСОВИЧ АЛЕКСАНДР ИВАНОВИЧ /
+						USOVICH ALIAKSANDR"
+						>
+							УСОВИЧ АЛЕКСАНДР ИВАНОВИЧ / USOVICH ALIAKSANDR
+						</option>
+						<option
+							value="КРУК КРИСТИНА АЛЕКСАНДРОВНА /
+							KRUK KRYSTSINA"
+						>
+							КРУК КРИСТИНА АЛЕКСАНДРОВНА / KRUK KRYSTSINA
+						</option>
+						<option
+							value="ГАЙШУН РОМАН ВИКТОРОВИЧ /
+							HAISHUN RAMAN"
+						>
+							ГАЙШУН РОМАН ВИКТОРОВИЧ / HAISHUN RAMAN
+						</option>
+					</select>
+					Вакцину назначил (ФИО врача)</label
+				>
+
+				<h3>2-ая вакцина</h3>
+				<label for=""><input type="date" name="second-date" /></label>
+
+				<label for=""
+					><input
+						type="text"
+						placeholder="Номер партии"
+						name="second-vaccine"
+					/>Номер партии</label
+				>
+
+				<label for="">
+					<select name="second-doctor">
+						<option
+							value="ВИДЕРГОЛЬД ДМИТРИЙ ВЛАДИМИРОВИЧ /
+						VIDERHOLD DZMITRY"
+						>
+							ВИДЕРГОЛЬД ДМИТРИЙ ВЛАДИМИРОВИЧ / VIDERHOLD DZMITRY
+						</option>
+						<option
+							value="СОЛОВЬЁВА ЕЛЕНА ВАСИЛЬЕВНА / SALAUYOVA ALENA"
+						>
+							СОЛОВЬЁВА ЕЛЕНА ВАСИЛЬЕВНА / SALAUYOVA ALENA
+						</option>
+						<option
+							value="ГОРБАЦЕВИЧ ИРЕНА ВИТАЛЬЕВНА /
+						HARBATSEVICH IRENA"
+						>
+							ГОРБАЦЕВИЧ ИРЕНА ВИТАЛЬЕВНА / HARBATSEVICH IRENA
+						</option>
+						<option
+							value="УСОВИЧ АЛЕКСАНДР ИВАНОВИЧ /
+						USOVICH ALIAKSANDR"
+						>
+							УСОВИЧ АЛЕКСАНДР ИВАНОВИЧ / USOVICH ALIAKSANDR
+						</option>
+						<option
+							value="КРУК КРИСТИНА АЛЕКСАНДРОВНА /
+							KRUK KRYSTSINA"
+						>
+							КРУК КРИСТИНА АЛЕКСАНДРОВНА / KRUK KRYSTSINA
+						</option>
+						<option
+							value="ГАЙШУН РОМАН ВИКТОРОВИЧ /
+							HAISHUN RAMAN"
+						>
+							ГАЙШУН РОМАН ВИКТОРОВИЧ / HAISHUN RAMAN
+						</option>
+					</select>
+					Вакцину назначил (ФИО врача)</label
+				>
+
+				<div class="buttons">
+					<!-- <button id="mocking">Mocking</button> -->
+					<button id="qr-code">Генерация QR-кода</button>
+					<button id="empty-page">Печать пустой страницы</button>
+					<button id="inner-side">Печать внутренней стороны</button>
+					<button id="front-side">Печать лицевой стороны</button>
+				</div>
+			</div>
+
+			<div class="print-data-inner">
+				<label id="family-name" class="uppercase"></label>
+				<label id="first-name" class="uppercase"></label>
+				<label id="middle-name" class="uppercase"></label>
+				<label id="birth"></label>
+				<label id="passport" class="uppercase"></label>
+				<label id="personal-number" class="uppercase"></label>
+				<label id="date-first-vaccination"></label>
+				<label id="first-vaccine" class="fs-9pt no-word-break"></label>
+				<label
+					id="first-doctor"
+					class="uppercase no-word-break"
+				></label>
+				<label id="date-second-vaccination"></label>
+				<label id="second-vaccine" class="fs-9pt no-word-break"></label>
+				<label
+					id="second-doctor"
+					class="uppercase no-word-break"
+				></label>
+			</div>
+
+			<div class="print-data-front">
+				<div class="organization">
+					Учреждение здравоохранения<br />«Березинская центральная
+					районная больница»<br />HEALTH CARE INSTITUTION<br />«BEREZINSKAYA
+					CENTRAL DISTRICT HOSPITAL»
+				</div>
+				<div class="qr-container"></div>
+			</div>
+		</main>
+	</body>
+</html>
