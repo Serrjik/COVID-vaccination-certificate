@@ -1,0 +1,363 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-width: 1800px;
+	width: 1800px;
+	font-size: 16px;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+@page {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+@media print {
+	html,
+	body {
+		min-width: auto !important;
+		width: 202mm !important;
+		height: 213mm !important;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+	body {
+		margin-left: 5mm !important;
+		margin-top: 4mm !important;
+	}
+
+	@page {
+		margin: 0 !important;
+		margin-left: 8mm !important;
+		padding: 0 !important;
+	}
+}
+
+input,
+select {
+	font-size: inherit;
+	padding: 3px 7px;
+}
+
+input::placeholder {
+	text-transform: none;
+}
+
+.buttons {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+}
+
+button {
+	max-width: 95px;
+	font-size: 14px;
+}
+
+.main {
+	display: flex;
+	flex-direction: row;
+}
+
+.input-data {
+	display: flex;
+	flex-direction: column;
+	row-gap: 7px;
+	padding: 10px;
+	width: 420px;
+	height: 970px;
+}
+
+.input-data label {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+@media print {
+	.input-data {
+		display: none;
+	}
+}
+
+.print-data-inner {
+	position: relative;
+	width: 915px;
+	height: 970px;
+	background: no-repeat #88c9f1 center
+		url('./assets/images/inner-side-certificate.jpg');
+	background-size: 100%;
+}
+
+@media print {
+	.print-data-inner {
+		width: 202mm;
+		height: 213mm;
+		background: none;
+	}
+}
+
+.print-data-inner label {
+	position: absolute;
+	font-family: 'Times New Roman', serif;
+	font-size: 16px;
+	/* background: red; */
+	width: 94mm;
+	min-height: 13mm;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	word-break: break-all;
+}
+
+@media print {
+	.print-data-inner label {
+		width: 77mm;
+		min-height: 10mm;
+		font-size: 12pt;
+	}
+}
+
+label[id='family-name'] {
+	top: 194px;
+	left: 50px;
+}
+
+@media print {
+	label[id='family-name'] {
+		top: 42mm;
+		left: 5mm;
+	}
+}
+
+label[id='first-name'] {
+	top: 274px;
+	left: 50px;
+}
+
+@media print {
+	label[id='first-name'] {
+		top: 59.5mm;
+		left: 5mm;
+	}
+}
+
+label[id='middle-name'] {
+	top: 354px;
+	left: 50px;
+}
+
+@media print {
+	label[id='middle-name'] {
+		top: 77mm;
+		left: 5mm;
+	}
+}
+
+label[id='birth'] {
+	top: 453px;
+	left: 50px;
+}
+
+@media print {
+	label[id='birth'] {
+		top: 98.4mm;
+		left: 5mm;
+	}
+}
+
+label[id='passport'] {
+	top: 533px;
+	left: 50px;
+}
+
+@media print {
+	label[id='passport'] {
+		top: 116mm;
+		left: 5mm;
+	}
+}
+
+label[id='personal-number'] {
+	top: 632px;
+	left: 50px;
+}
+
+@media print {
+	label[id='personal-number'] {
+		top: 137mm;
+		left: 5mm;
+	}
+}
+
+label[id='date-first-vaccination'] {
+	top: 292px;
+	left: 515px;
+}
+
+@media print {
+	label[id='date-first-vaccination'] {
+		top: 65mm;
+		left: 107mm;
+	}
+}
+
+label[id='first-vaccine'] {
+	top: 366px;
+	left: 515px;
+}
+
+@media print {
+	label[id='first-vaccine'] {
+		top: 78mm;
+		left: 107mm;
+		line-height: 1.1;
+		min-height: 14mm;
+	}
+}
+
+label[id='first-doctor'] {
+	top: 442px;
+	left: 515px;
+}
+
+@media print {
+	label[id='first-doctor'] {
+		top: 97mm;
+		left: 107mm;
+		font-size: 11pt;
+	}
+}
+
+label[id='date-second-vaccination'] {
+	top: 686px;
+	left: 515px;
+}
+
+@media print {
+	label[id='date-second-vaccination'] {
+		top: 151mm;
+		left: 107mm;
+	}
+}
+
+label[id='second-vaccine'] {
+	top: 761px;
+	left: 515px;
+}
+
+@media print {
+	label[id='second-vaccine'] {
+		top: 167mm;
+		left: 107mm;
+		line-height: 1.1;
+		min-height: 14mm;
+	}
+}
+
+label[id='second-doctor'] {
+	top: 837px;
+	left: 515px;
+}
+
+@media print {
+	label[id='second-doctor'] {
+		top: 185mm;
+		left: 107mm;
+		font-size: 11pt;
+	}
+}
+
+.print-data-front {
+	position: relative;
+	width: 457px;
+	height: 970px;
+	background: no-repeat #88c9f1 right bottom
+		url('./assets/images/front-side-certificate.jpg');
+	background-size: auto 100%;
+}
+
+@media print {
+	.print-data-front {
+		width: 202mm;
+		height: 213mm;
+		/* background: none; */
+	}
+}
+
+.organization {
+	position: absolute;
+	right: 35px;
+	top: 327px;
+	width: 385px;
+	height: 80px;
+	text-align: center;
+	font-size: 10pt !important;
+	/* background-color: rgba(255, 0, 0, 0.418); */
+}
+
+@media print {
+	.organization {
+		width: 85mm;
+		height: 20mm;
+		top: 70mm;
+		left: 100mm;
+	}
+}
+
+.qr-container {
+	position: absolute;
+	right: 100px;
+	bottom: 50px;
+	width: 250px;
+	height: 250px;
+	/* background: red; */
+}
+
+@media print {
+	.qr-container {
+		width: 61mm;
+		height: 61mm;
+		right: 17mm;
+		bottom: 5mm;
+	}
+}
+
+.qr-container canvas {
+	width: 250px !important;
+	height: 250px !important;
+}
+
+@media print {
+	.qr-container canvas {
+		width: 61mm !important;
+		height: 61mm !important;
+	}
+}
+
+/*    Утилитарные классы    */
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.fs-9pt {
+	font-size: 9pt !important;
+}
+
+.no-word-break {
+	word-break: keep-all !important;
+}
+
+@media print {
+	.no-print {
+		display: none;
+	}
+}
