@@ -1,3 +1,5 @@
+'use strict'
+
 // Константы.
 const CHINA_VACCINE_RU = `Вакцина против SARS-CoV-2 (клетки Веро)
 инактивированная, Sinopharm/BIBP,  КНР, `
@@ -49,11 +51,11 @@ const secondVaccine = document.querySelector('#second-vaccine')
 const secondDoctor = document.querySelector('#second-doctor')
 
 // Кнопки.
-// mockingButton = document.querySelector('#mocking')
-qrCodeButton = document.querySelector('#qr-code')
-emptyPageButton = document.querySelector('#empty-page')
-innerSideButton = document.querySelector('#inner-side')
-frontSideButton = document.querySelector('#front-side')
+const mockingButton = document.querySelector('#mocking')
+const qrCodeButton = document.querySelector('#qr-code')
+const emptyPageButton = document.querySelector('#empty-page')
+const innerSideButton = document.querySelector('#inner-side')
+const frontSideButton = document.querySelector('#front-side')
 
 const getFullVaccineName = vaccineName => {
 	switch (vaccineName) {

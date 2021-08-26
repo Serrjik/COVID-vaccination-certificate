@@ -16,6 +16,8 @@ function createWindow() {
 	win = new BrowserWindow({
 		width: 1820,
 		height: 1040,
+		nodeIntegration: true, // новая строка
+		contextIsolation: false, // новая строка
 		// icon: './icon.png',
 	})
 
